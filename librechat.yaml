@@ -2,11 +2,11 @@ version: "1.2.8"
 
 endpoints:
   custom:
-    - id: gemini-rotator
+    - id: "gemini-rotator"
       name: "Gemini (Rotator)"
       type: "google"
       baseURL: "${GEMINI_ROTATOR_BASE}"
-      apiKey: "${ROTATOR_DUMMY_KEY}"     # mis. "rotator" (dummy saja)
+      apiKey: "${ROTATOR_DUMMY_KEY}"
       headers:
         x-rotator-secret: "${ROTATOR_SECRET}"
       models:
@@ -16,3 +16,9 @@ endpoints:
           - "gemini-2.0-flash"
       customParams:
         defaultParamsEndpoint: "google"
+        stream: false
+        generationConfig:
+          responseMimeType: "text/plain"
+          maxOutputTokens: 4500
+      titleModel: "gemini-2.5-flash"
+      summarizeModel: "gemini-2.5-flash"
