@@ -15,7 +15,7 @@ const cfg = {
       customParams: {
         defaultParamsEndpoint: 'google',
         stream: false,
-        generationConfig: { responseMimeType: 'text/plain', maxOutputTokens: 1024 }
+        generationConfig: { responseMimeType: 'text/plain', maxOutputTokens: 5000 }
       },
       titleModel: 'gemini-2.5-flash',
       summarizeModel: 'gemini-2.5-flash'
