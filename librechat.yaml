@@ -16,9 +16,5 @@ endpoints:
           - "gemini-2.0-flash"
       customParams:
         defaultParamsEndpoint: "google"
-        stream: false
-        generationConfig:
-          responseMimeType: "text/plain"
-          maxOutputTokens: 4500
       titleModel: "gemini-2.5-flash"
       summarizeModel: "gemini-2.5-flash"
