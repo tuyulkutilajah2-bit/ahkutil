@@ -1,0 +1,18 @@
+version: "1.2.8"
+
+endpoints:
+  custom:
+    - id: gemini-rotator
+      name: "Gemini (Rotator)"
+      type: "google"
+      baseURL: "${GEMINI_ROTATOR_BASE}"
+      apiKey: "${ROTATOR_DUMMY_KEY}"     # mis. "rotator" (dummy saja)
+      headers:
+        x-rotator-secret: "${ROTATOR_SECRET}"
+      models:
+        default:
+          - "gemini-2.5-pro"
+          - "gemini-2.5-flash"
+          - "gemini-2.0-flash"
+      customParams:
+        defaultParamsEndpoint: "google"
