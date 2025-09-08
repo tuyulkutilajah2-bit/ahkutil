@@ -5,10 +5,10 @@ endpoints:
     - id: "gemini-rotator"
       name: "Gemini (Rotator)"
       type: "google"
-      baseURL: "${GEMINI_ROTATOR_BASE}"
-      apiKey: "${ROTATOR_DUMMY_KEY}"
+      baseURL: "https://kutil.tuyulkutilajah2.workers.dev"
+      apiKey: "rotator"
       headers:
-        x-rotator-secret: "${ROTATOR_SECRET}"
+        x-rotator-secret: "kutil-rotator-1HcPtAkJ3GY1EV5n"
       models:
         default:
           - "gemini-2.5-pro"
