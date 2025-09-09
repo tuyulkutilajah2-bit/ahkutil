@@ -1,7 +1,7 @@
 version: "1.2.8"
 endpoints:
   custom:
-    - id: gemini-rotator
+    - id: gemini-rotator          
       name: "Gemini (Rotator)"
       type: "google"
       baseURL: "${GEMINI_ROTATOR_BASE}"
@@ -17,3 +17,18 @@ endpoints:
       summaryModel: "current_model"
       customParams:
         defaultParamsEndpoint: "google"
+
+    - id: gemini-rotator-openai  
+      name: "Gemini (Rotator) OpenAI"
+      type: "openai"
+      baseURL: "${GEMINI_ROTATOR_BASE}/v1"  
+      apiKey: "${ROTATOR_DUMMY_KEY}"
+      headers:
+        x-rotator-secret: "${ROTATOR_SECRET}"
+      models:
+        default: ["gemini-2.5-flash"]   
+        fetch: false
+      titleConvo: true
+      titleModel: "current_model"
+      summarize: false
+      summaryModel: "current_model"
