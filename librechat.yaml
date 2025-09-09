@@ -1,7 +1,13 @@
 version: "1.2.8"
+
+webSearch:
+  serperApiKey: "${SERPER_API_KEY}"
+  searchProvider: "serper"
+  scraperType: "serper"
+
 endpoints:
   custom:
-    - id: gemini-rotator          
+    - id: gemini-rotator
       name: "Gemini (Rotator)"
       type: "google"
       baseURL: "${GEMINI_ROTATOR_BASE}"
@@ -9,7 +15,7 @@ endpoints:
       headers:
         x-rotator-secret: "${ROTATOR_SECRET}"
       models:
-        default: ["gemini-2.5-flash"]
+        default: ["gemini-2.5-flash", "gemini-2.5-pro"]
         fetch: false
       titleConvo: true
       titleModel: "current_model"
@@ -18,15 +24,15 @@ endpoints:
       customParams:
         defaultParamsEndpoint: "google"
 
-    - id: gemini-rotator-openai  
+    - id: gemini-rotator-openai
       name: "Gemini (Rotator) OpenAI"
       type: "openai"
-      baseURL: "${GEMINI_ROTATOR_BASE}/v1"  
+      baseURL: "${GEMINI_ROTATOR_BASE}/v1"
       apiKey: "${ROTATOR_DUMMY_KEY}"
       headers:
         x-rotator-secret: "${ROTATOR_SECRET}"
       models:
-        default: ["gemini-2.5-flash", "gemini-2.5-pro"] 
+        default: ["gemini-2.5-flash", "gemini-2.5-pro"]
         fetch: false
       titleConvo: true
       titleModel: "current_model"
