@@ -3,7 +3,7 @@ version: "1.2.8"
 webSearch:
   serperApiKey: "${SERPER_API_KEY}"
   searchProvider: "serper"
-  scraperType: "serper"
+  scraperType: "firecrawl"
 
 endpoints:
   custom:
